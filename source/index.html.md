@@ -24,7 +24,7 @@ This example API documentation page was created with [Slate](https://github.com/
 
 # Authentication
 
-## 登入
+## Get All Kittens
 
 ```shell
 # -
