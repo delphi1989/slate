@@ -28,10 +28,6 @@ This example API documentation page was created with [Slate](https://github.com/
 
 > json 攜帶參數
 
-```shell
-
-```
-
 ```json
 {
   "username" : "使用者名稱",
