@@ -3,9 +3,6 @@ title: API Reference
 
 language_tabs:
   - shell
-  - ruby
-  - python
-  - javascript
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -27,42 +24,33 @@ This example API documentation page was created with [Slate](https://github.com/
 
 # Authentication
 
-> To authorize, use this code:
+## 登入
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
+> json 攜帶參數
 
 ```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+
 ```
 
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
+```json
+{
+  "username" : "使用者名稱",
+  "password" : "使用者密碼"
+}
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> 回傳的內容會是
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+```json
+{
+  "id_token" : "Access Token"
+}
+```
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
+適用於系統使用者或一般使用者
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+透過 header `urad-Authorization: Bearer [Access Token]` 的方式來使用 Access Token
 </aside>
 
 # Kittens
